@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+      .webmargin {
+         margin-top: 300px;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   
+   <div>
+      <a href="">
+         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+            class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+            <path
+               d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1" />
+         </svg>
+      </a>
+      <b>001</b>
+      <a href="002.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+            <path
+               d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1" />
+         </svg>
+      </a>
+   </div>
+
+
+
+
+   <h3>CDN(Content Delivery Network) - 컨텐츠 전송 네트워크</h3> <br>
+   사용자와 가장 가까운 캐시 서버에 요청 및 응답을 받아 빠르게 컨텐츠를 사용하는 방식<br><br>
+   CDN 방식으로 bootstrap link 태그와 script 태그 복붙 사용
+   <hr>
+   <h3>HTML5 태그 class 이름 정하기</h3>
+   class 이름을 잘 짓는 것은 매우 중요. 특히 CSS code 작성시 효율 증대<br><br>
+   <h5>BEM(Block Element Modifier) 방식</h5>
+   <h5>1. Block</h5>
+   >> 기능적으로 독립된 페이지 컴포넌트(요소)로 headr, content, article, navigation bar 등을 의미<br>
+   >> block은 상태가 아니라 그것의 기능적 목적을 넣어야 함 (예. menu, button 등)<br>
+   <pre>
+<xmp>
+   ex) <div class="header"></div> : header 기능 명시
+</xmp>
+</pre>
+   >> block은 추가적인 여백(margin, padding 등), 위치등 설정하지 않는다 (환경에 영향 받으면 안 됨)<br>
+   <pre>
+<xmp>
+   ex) <div class="header-margin"></div> : 사용하면 안 됨
+</xmp>
+</pre>
+   >> BEM 방식의 경우 CSS tag나 ID 선택자를 사용하면 안 됨.<br>
+   <pre>
+<xmp>
+   ex) <div class="div"></div> : 사용하며 안 됨
+</xmp>
+</pre>
+   >> block 내부에 block 존재 가능
+   <pre>
+<xmp>
+   ex) <div class="header">
+         <div class="logo"></div>
+         <div class="search-form"></div>
+      </div>
+</xmp>
+</pre>
+   >> 두 개의 단어를 - 로 연결하여 사용 가능
+   <pre>
+<xmp>
+   ex) <div class="main-header"></div>
+</xmp>
+</pre>
+   <h5>2. Element</h5>
+   >> block 내의 하위 요소들을 의미함<br>
+   >> block_element 형식으로 작성<br>
+   >> 엘레멘트 이름이 두 개의 단어일 경우 block_element-name 로 작성<br>
+   <pre><xmp>
+   ex)
+   <header class="header">
+      <div class="header_title"></div>
+      <div class="header_icon"></div>
+   </header>
+
+   CSS
+   .header {
+      스타일
+   }
+   .header_title {
+      스타일
+   }
+   .header_icon {
+      스타일
+   }
+</xmp></pre>
+   <b>아래 CSS 코드를 사용하지 말자</b>
+   <pre><xmp>
+   .header .header_title {
+      스타일
+   }
+   div.header_icon {
+      스타일
+   }
+</xmp></pre>
+
+   <h5>3. Modifier</h5>
+   >> 블록이나 요소의 모양 or 상태를 나타내는 이름을 사용
+   <pre><xmp>
+   ex) size-s, theme-island, disables, focused, directrons_left-top 등
+</xmp></pre>
+   >> 각각 하나의 _ 만 사용<br>
+   >> 단독으로 modifier을 사용하면 안 됨<br>
+   <pre><xmp>
+   ex) 
+   block_element-modifier
+   block-name_element-name_modifier-name
+   block-name_element-name_modifier-name_modifier-value
+</xmp></pre>
+
+   <h5>4. MIX</h5>
+   >> 기존 것에 기반하여 새로운 UI Components를 의미있게 만들 수 있음.
+   <pre><xmp>
+   ex) a block과 b block이 있을 때 a 스타일을 b block 특정 요소에 적용하고 싶을 때 띄어쓰기로 다중 class를 갖게 함
+   <div class="a"></div>
+   <div class="b">
+      <div class="b_element a"></div>
+   </div>
+
+   CSS
+   .a {
+      스타일
+   }
+</xmp></pre>
+
+
+   <div class="webmargin">여백</div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+      .b {
+         border: solid 1px black;
+      }
+   </style>
+</head>
+
+<body>
+   <div>
+      <a href="003.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+            class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+            <path
+               d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1" />
+         </svg>
+      </a>
+      <b>004</b>
+      <a href="005.html">
+         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+            class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+            <path
+               d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1" />
+         </svg>
+      </a>
+   </div>
+   
+   <h1>이미지 fluid. 이미지 크기에 따라 그리드 col 자동 조정</h1>
+   <hr>
+
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <img src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img src="test.jpg" alt="img">
+         </div>
+      </div>
+   </div>
+
+   <xmp>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <img src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img src="test.jpg" alt="img">
+            </div>
+         </div>
+      </div>
+   </xmp>
+   <br><br>
+   <hr>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="img-fluid" src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img class="img-fluid" src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img class="img-fluid" src="test.jpg" alt="img">
+         </div>
+      </div>
+   </div>
+
+   <br>
+   <h5>img 태그에 class='img-fluid' 설정하여 크기에 맞게 col 너비 자동 조정</h5>
+   <xmp>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <img class="img-fluid" src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img class="img-fluid" src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img class="img-fluid" src="test.jpg" alt="img">
+            </div>
+         </div>
+      </div>
+   </xmp>
+
+   <hr>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="img-fluid" src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img class="img-fluid rounded" src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img class="img-fluid rounded-circle" src="test.jpg" alt="img">
+         </div>
+      </div>
+   </div>
+
+   <br>
+   <h5>img 태그에 class='rounded' or class='rounded-circle' 설정하여 이미지 모서리 둥글게 또는 완전 원형(타원)으로</h5>
+   ※ 참고로 정사각형 이미지에 class='rounded-circle' 해야 타원이 아닌 정 원이 됨.
+   <xmp>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <img class="img-fluid" src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img class="img-fluid rounded" src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img class="img-fluid rounded-circle" src="test.jpg" alt="img">
+            </div>
+         </div>
+      </div>
+   </xmp>
+
+   <hr>
+
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <img class="img-fluid img-thumbnail" src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img class="img-fluid rounded img-thumbnail" src="test.jpg" alt="img">
+         </div>
+         <div class="col-md-4">
+            <img class="img-fluid rounded-circle img-thumbnail" src="test.jpg" alt="img">
+         </div>
+      </div>
+   </div>
+
+   <br>
+   <h5>img 태그에 class='img-thumbnail' 해서 액자처럼 꾸미기 가능</h5>
+   <xmp>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <img class="img-fluid img-thumbnail" src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img class="img-fluid rounded img-thumbnail" src="test.jpg" alt="img">
+            </div>
+            <div class="col-md-4">
+               <img class="img-fluid rounded-circle img-thumbnail" src="test.jpg" alt="img">
+            </div>
+         </div>
+      </div>
+   </xmp>
+
+
+
+
+
+
+   <div class="webmargin" style="margin-top:200px; text-align:center;">여백</div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
